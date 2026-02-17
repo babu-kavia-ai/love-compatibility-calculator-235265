@@ -1,8 +1,20 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders the Love Compatibility Calculator UI", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // Title
+  expect(
+    screen.getByRole("heading", { name: /love compatibility calculator/i })
+  ).toBeInTheDocument();
+
+  // Primary action
+  expect(
+    screen.getByRole("button", { name: /calculate/i })
+  ).toBeInTheDocument();
+
+  // Inputs
+  expect(screen.getByLabelText(/first name/i)).toBeInTheDocument();
+  expect(screen.getByLabelText(/second name/i)).toBeInTheDocument();
 });
