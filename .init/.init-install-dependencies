@@ -1,0 +1,4 @@
+{
+    "command": "npm install",
+    "working_directory": "/tmp/kavia/workspace/code-generation/love-compatibility-calculator-235265/love_calculator_frontend"
+}
